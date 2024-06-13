@@ -1,9 +1,9 @@
-import CalendarToDo from "./calendar/Calendar";
+import CalendarTodo from "./calendar/Calendar";
 
 function App() {
   return (
     <div className="App">
-      <CalendarToDo/>
+      <CalendarTodo/>
     </div>
   );
 }

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px 40px 10px;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal-overlay::before,
+.modal-overlay::after {
+  content: "";
+  display: block;
+  height: 1px;
+  flex-grow: 1;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  max-width: 40.625rem;
+  padding: 40px 20px 50px 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 10px #a9d4ff);
+  transform: translateY(50px);
+  transition: transform 0.3s;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(50px);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  width: 30px;
+  height: 30px;
+  stroke: #a4a4a4;
+  transition: stroke 0.3s;
+}
+
+.modal-close-button:hover {
+  stroke: #ff0000;
+}
+
+.modal-content h2 {
+  margin-bottom: 18px;
+  font-size: 36px;
+  color: #006edc;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+.modal-content p {
+  margin-bottom: 33px;
+  font-size: 24px;
+  color: #2e2e2e;
+  text-align: start;
+  white-space: pre-wrap;
+}
+
+.close-icon {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 35px;
+  height: 35px;
+  stroke: #a4a4a4;
+  transition: stroke 0.3s;
+}
