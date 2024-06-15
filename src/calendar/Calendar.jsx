@@ -5,11 +5,14 @@ import { CustomModal } from '../modal/CustomModal';
 
 function CalendarTodo () {
   const [date, setDate] = useState(new Date());
+
   const [isOpen, setIsOpen] = useState(false);
+
 	const [tasks, setTasks] = useState(() => {
 		const savedTasks = localStorage.getItem('tasks')
 		return savedTasks ? JSON.parse(savedTasks) : {}
 	})
+	
 	const [newTask, setNewTask] = useState('');
 	const [selectedDay, setSelectedDay] = useState(null);
 
